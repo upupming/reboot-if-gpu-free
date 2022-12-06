@@ -8,9 +8,13 @@ let totalMB = 1e10
 let threshold = 1024
 try {
   // https://github.com/google/zx#minimist-package
-  threshold = parseInt(argv._[0])
+  if (argv._[0]) {
+    let tmp = parseInt(argv._[0])
+    if (Number.isNaN(tmp)) { throw Error() }
+    threshold = tmp
+  }
 } catch { }
-console.log(`GPU usage threshold: ${threshold}MB, you can change threshold using params, eg:
+console.log(`GPU usage threshold: ${threshold} MB, you can change threshold using params, eg:
 
     reboot-if-gpu-free 2048
 

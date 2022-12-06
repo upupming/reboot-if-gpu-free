@@ -8,11 +8,12 @@ reboot-if-gpu-free
 ## Run script everyday to avoid machine hangup
 
 ```bash
-sudo vi
+sudo crontab -e
 ```
 
-Run every 8:00AM:
+Run every 8:00 AM:
 
-```crontab
-00 8 * * * reboot-if-gpu-free
+```conf
+# change the path to result of `which reboot-if-gpu-free`
+00 8 * * * /home/username/.local/share/pnpm/reboot-if-gpu-free
 ```
