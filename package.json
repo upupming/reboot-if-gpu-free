@@ -1,0 +1,18 @@
+{
+  "name": "reboot-if-gpu-free",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.mjs",
+  "bin": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-nvidia-smi": "^1.0.0",
+    "reboot-if-gpu-free": "^1.0.0",
+    "zx": "^7.1.1"
+  }
+}
